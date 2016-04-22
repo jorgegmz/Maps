@@ -55,7 +55,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         final LocationListener locationListener = new LocationListener() {
             @Override
             public void onLocationChanged(Location location) {
-                mMap.addMarker(new MarkerOptions().position(new LatLng(location.getLatitude(),location.getLongitude())).title("updated path"));
+                mMap.clear();
+                mMap.addMarker(new MarkerOptions().position(new LatLng(location.getLatitude(), location.getLongitude())).title("updated path"));
+
                // locationListener.setVisible(false);
             }
 
